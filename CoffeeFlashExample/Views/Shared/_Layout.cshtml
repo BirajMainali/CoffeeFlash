@@ -87,7 +87,7 @@
             {
                 foreach(var message in successMessageList)
                 {
-                    <text> notifySuccess("@message"); </text>
+                    @: notifySuccess("@message");
                 }
             }
             var errorMessageList = TempData["error-message"] as IEnumerable<string> ?? new List<string>();
@@ -95,7 +95,7 @@
             {
                 foreach (var message in errorMessageList)
                 {
-                    <text> notifyError("@message"); </text>
+                    @: notifyError("@message"); 
                 }
             }
             var infoMessageList = TempData["info-message"] as IEnumerable<string> ?? new List<string>();
@@ -103,7 +103,7 @@
             {
                 foreach (var message in infoMessageList)
                 {
-                    <text> notifyInfo("@message"); </text>
+                   @: notifyInfo("@message"); 
                 }
             }
         }
